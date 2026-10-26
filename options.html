@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZD Alerter Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Settings</h1>
+      <p class="lead">
+        Alerts for tickets with status <strong>New</strong> that are
+        <strong>unassigned</strong>. Token stays in this browser only.
+      </p>
+
+      <label>
+        Zendesk subdomain
+        <div class="row">
+          <span>https://</span>
+          <input id="subdomain" type="text" placeholder="yourcompany" />
+          <span>.zendesk.com</span>
+        </div>
+      </label>
+
+      <label>
+        Agent email
+        <input id="email" type="email" autocomplete="username" placeholder="you@company.com" />
+      </label>
+
+      <label>
+        API token
+        <input id="apiToken" type="password" autocomplete="current-password" placeholder="Zendesk API token" />
+        <small>
+          Admin Center → Apps and integrations → APIs → Zendesk API → Add API token
+        </small>
+      </label>
+
+      <label>
+        Poll interval (seconds)
+        <input id="pollIntervalSec" type="number" min="30" max="3600" step="30" />
+        <small>Chrome may clamp very short intervals (about 30s unpacked, 60s if published).</small>
+      </label>
+
+      <div class="actions">
+        <button id="save" type="button">Save</button>
+        <button id="test" type="button" class="secondary">Test check</button>
+        <button id="testSound" type="button" class="secondary">Test doorbell</button>
+        <button id="resetSeen" type="button" class="ghost">Reset seen tickets</button>
+      </div>
+
+      <p id="msg" class="msg" hidden></p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

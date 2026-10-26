@@ -1,0 +1,97 @@
+:root {
+  --bg: #10151b;
+  --panel: #1a222c;
+  --text: #eef3f8;
+  --muted: #9aabba;
+  --accent: #2f80ed;
+  --border: #2b3642;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 14px/1.45 "SF Pro Text", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #1c2a3a, var(--bg) 55%);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 22px 18px 32px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+small {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 650;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+}
+
+button.secondary { background: #2a3541; color: var(--text); }
+button.ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+
+.msg {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(47, 128, 237, 0.15);
+}
+
+.msg.error {
+  background: rgba(229, 83, 75, 0.15);
+  color: #ffb4af;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZD Alerter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ZD Ticket Alerter</h1>
+      <p class="sub">New + unassigned</p>
+    </header>
+
+    <label class="switch-row">
+      <span>Watching</span>
+      <input type="checkbox" id="enabled" />
+    </label>
+
+    <div class="status" id="statusBox">
+      <div><span class="label">State</span> <span id="stateText">Off</span></div>
+      <div><span class="label">Open matches</span> <span id="matchCount">—</span></div>
+      <div><span class="label">Last check</span> <span id="lastCheck">—</span></div>
+      <div class="error" id="lastError" hidden></div>
+    </div>
+
+    <div class="actions">
+      <button id="checkNow" type="button">Check now</button>
+      <button id="openSettings" type="button" class="secondary">Settings</button>
+    </div>
+
+    <p class="hint">Turn Watching on only when you want alerts. Credentials stay in Settings.</p>
+    <script src="popup.js"></script>
+  </body>
+</html>

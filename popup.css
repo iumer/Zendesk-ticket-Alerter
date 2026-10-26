@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f1419;
+  --panel: #1a222c;
+  --text: #eef3f8;
+  --muted: #9aabba;
+  --accent: #2f80ed;
+  --ok: #1f9d55;
+  --danger: #e5534b;
+  --border: #2b3642;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 300px;
+  font: 13px/1.4 "SF Pro Text", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #15202b 0%, #0f1419 55%, #121820 100%);
+  padding: 14px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.sub {
+  margin: 2px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.switch-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ok);
+}
+
+.status {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: var(--muted);
+  display: inline-block;
+  min-width: 96px;
+}
+
+.error {
+  color: #ffb4af;
+  background: rgba(229, 83, 75, 0.12);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 4px;
+  word-break: break-word;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 9px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+}
+
+button.secondary {
+  background: #2a3541;
+  color: var(--text);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
